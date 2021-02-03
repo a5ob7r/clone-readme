@@ -1,5 +1,9 @@
 # clone-readme
 
+## Summary
+
+The file system on macOS of GitHub Action is case insensitive.
+
 ## Investigation
 
 First, some files are missing in a respositry when run `git clone` with `actions/checkout@v2` on macOS using GitHub Action.
@@ -99,3 +103,15 @@ colliding group is in the working tree:
   'files/README.md'
   'files/readme.md'
 ```
+
+## Test
+
+Test above an assumption using GitHub Actions.
+On Linux, the test should pass.
+And on macOS, the test should fail.
+
+See https://github.com/a5ob7r/clone-readme/actions .
+
+## Conclusion
+
+At 2021-02-03, the file system, which maybe it is APFS, on macOS of GitHub Action is case insensitive.
