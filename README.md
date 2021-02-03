@@ -15,6 +15,7 @@ In conclete, see follow.
   - README.rst
   - haskell-README.md
   - haskell-README.md.en
+  - haskell-readme.md
   - haskell-readme.md.en
   - haskell.README.md
   - haskell.README.md.en
@@ -29,7 +30,7 @@ In conclete, see follow.
   - README.md-haskell
   - README.md.haskell
   - README.rst
-  - haskell-README.md
+  - haskell-readme.md
   - haskell-readme.md.en
   - haskell.readme.md
   - haskell.readme.md.en
@@ -46,9 +47,10 @@ Diff of above, `diff Expected Actual`
 5,6d2
 < README
 < README.md
-11d6
+10,11d5
+< haskell-README.md
 < haskell-README.md.en
-13,14d7
+14,15d7
 < haskell.README.md
 < haskell.README.md.en
 ```
