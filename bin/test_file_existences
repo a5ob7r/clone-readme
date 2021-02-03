@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# Script purpose
+#
+
+set -Cueo pipefail
+
+readonly FILEPATH="$1"
+readonly FILEBASE=$(dirname "${BASH_SOURCE[0]}")
+
+cd "${FILEBASE}/.."
+
+diff <(git ls-files "$FILEPATH" | while read -r f; do basename "$f"; done | sort) <(ls -A "$FILEPATH" | sort)

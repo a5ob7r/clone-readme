@@ -1,0 +1,21 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test file existences about files
+        run: bin/test_file_existences files
+        if: ${{ always() }}
+
+      - name: Test file existences about files2
+        run: bin/test_file_existences files2
+        if: ${{ always() }}
